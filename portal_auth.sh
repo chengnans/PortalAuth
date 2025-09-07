@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 # Portal 自动认证脚本
 # 作者：chengnans
@@ -114,4 +114,5 @@ main() {
 }
 
 # 执行主程序
+
 main
