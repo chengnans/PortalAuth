@@ -217,6 +217,11 @@ WX_WEBHOOK_URL="https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=你的KEY"
 
 ### 2. 测试通知是否正常
 
+权限问题：确保脚本有执行权限：
+```bash
+chmod +x /path/to/portal_auth.sh
+```
+
 你可以手动运行一次（未认证状态下）：
 
 ```bash
