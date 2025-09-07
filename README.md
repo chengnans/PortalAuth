@@ -145,35 +145,6 @@ main
 LOG_FILE="/var/log/portal_auth.log"
 ```
 
-- ✅ 优点：标准日志目录，便于统一管理
-- ⚠️ 注意：普通用户可能无权限写入 `/var/log/`，解决方法：
-
-### 方案一：用 root 运行（推荐用于系统服务）
-
-```bash
-sudo crontab -e
-```
-
-添加：
-
-```bash
-*/2 * * * * /path/to/portal_auth.sh
-```
-
-> 注意：此时脚本也需 root 可读可执行。
-
-### 方案二：改用用户目录（无 root 权限时）
-
-```bash
-LOG_FILE="$HOME/portal_auth.log"
-```
-
-或
-
-```bash
-LOG_FILE="/tmp/portal_auth.log"
-```
-
 
 
 ---
