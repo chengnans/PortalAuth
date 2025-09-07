@@ -5,19 +5,19 @@
 # 日期：2025-09-07
 
 # ========== 配置区域 ==========
-PORTAL_URL="http://portal_ip:801/eportal/portal/login"
+PORTAL_URL="http://10.10.185.8:801/eportal/portal/login"
 # HUAWEI网络连通性测试URL
 TEST_URL="http://connectivitycheck.platform.hicloud.com/generate_204"
-PORTAL_DOMAIN="portal服务器地址"
-USER_ACCOUNT="你的账号"
-USER_PASSWORD="你的密码"
+PORTAL_DOMAIN="10.10.185.8"
+USER_ACCOUNT="19905361206"
+USER_PASSWORD="19905361206"
 JS_VERSION="4.2.1"
 TERMINAL_TYPE="1"
 LANG="zh-cn"
 V="3914"
 
 # 🆕 企业微信机器人 Webhook（替换成你自己的）
-WX_WEBHOOK_URL="https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=你的KEY"
+WX_WEBHOOK_URL="https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=237af008-01e3-41fb-a967-0f8a0af71cd2"
 
 # 🆕 本地日志文件路径（建议使用 /var/log，需 root 权限；普通用户可用 ~/portal_auth.log）
 LOG_FILE="/var/log/portal_auth.log"
@@ -96,7 +96,7 @@ do_login() {
         send_wx_msg "📡 Portal 自动认证成功！\n时间：$(date '+%Y-%m-%d %H:%M:%S')\n设备：Linux 自动脚本"
         return 0
     else
-        log "❌ 认证失败！响应：${response:0:200}..."  # 截取前200字符，避免日志爆炸
+        log "❌ 认证失败！响应：${response:0:200}..."
         send_wx_msg "⚠️ Portal 认证失败！\n时间：$(date '+%Y-%m-%d %H:%M:%S')\n响应：${response:0:200}..."
         return 1
     fi
@@ -114,5 +114,4 @@ main() {
 }
 
 # 执行主程序
-
 main
