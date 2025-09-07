@@ -16,7 +16,7 @@
 ## ✅ 脚本
 
 ```bash
-#!/bin/bash
+#!/usr/bin/bash
 
 # Portal 自动认证脚本
 # 作者：chengnans
